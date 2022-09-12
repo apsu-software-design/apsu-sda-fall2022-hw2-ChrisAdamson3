@@ -7,14 +7,14 @@ import {Gatherings} from './gatherings';
 import {Organizations} from './organizations';
 
 export class GatheringManager {
-    private members:[Members];
-    private gatherings:[Gatherings];
-    private organizations:[Organizations];
+    private members:Members[];
+    private gatherings:Gatherings[];
+    private organizations:Organizations[];
 
     constructor() {
-        this.members;
-        this.gatherings;
-        this.organizations;
+        this.members =[];
+        this.gatherings=[];
+        this.organizations=[];
     }
 
     addMember(name: string, email: string) {
@@ -36,16 +36,16 @@ export class GatheringManager {
 
 
             for(let i=0; i<this.members.length; i++){
-                if(Members[i].name == name){
-                    addMem = Members[i];
+                if(this.members[i].getName == name){
+                    addMem = this.members[i];
 
                 }
 
 
             } 
             for(let i=0; i<this.gatherings.length; i++){
-                if (Gatherings[i].title == gatheringTitle){
-                    gath = Gatherings[i];
+                if (this.gatherings[i].getTitle == gatheringTitle){
+                    gath = this.gatherings[i];
                 }
             } 
             
@@ -59,16 +59,16 @@ export class GatheringManager {
 
 
             for(let i=0; i<this.organizations.length; i++){
-                if(Organizations[i].name == organizationTitle){
-                    org = Organizations[i];
+                if(this.organizations[i].getTitle == organizationTitle){
+                    org = this.organizations[i];
 
                 }
 
 
             } 
             for(let i=0; i<this.gatherings.length; i++){
-                if (Gatherings[i].title == gatheringTitle){
-                    gath = Gatherings[i];
+                if (this.gatherings[i].getTitle == gatheringTitle){
+                    gath = this.gatherings[i];
                 }
             } 
             
@@ -94,17 +94,17 @@ export class GatheringManager {
         let gath:Gatherings;
 
         for(let i=0; i<this.gatherings.length; i++){
-            if (Gatherings[i].title == gatheringTitle){
-                gath = Gatherings[i];
+            if (this.gatherings[i].getTitle == gatheringTitle){
+                gath = this.gatherings[i];
             }
         } 
-
+        
         
         return gath.viewMembers();
     }
 
     findMemberNames(query: string): string[] {
-        let arr:string[];
+        let arr:string[] = [];
         for(let i=0; i<this.members.length; i++){
             if (this.members[i].getName == query){
                 arr.push(query);
@@ -114,7 +114,7 @@ export class GatheringManager {
     }
 
     findGatheringNames(query: string): string[] {
-        let arr:string[];
+        let arr:string[]=[];
         for(let i=0; i<this.gatherings.length; i++){
             if (this.gatherings[i].getTitle == query){
                 arr.push(query);
@@ -126,7 +126,7 @@ export class GatheringManager {
     }
 
     findOrganizationNames(query: string): string[] {
-        let arr:string[];
+        let arr:string[]=[];
         for(let i=0; i<this.organizations.length; i++){
             if (this.organizations[i].getTitle == query){
                 arr.push(query);

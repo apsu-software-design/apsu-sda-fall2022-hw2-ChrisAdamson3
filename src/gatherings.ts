@@ -6,7 +6,7 @@ export class Gatherings{
   private  title:string;
    private location:string;
    private date:string;
-   private members:[Members];
+   private members:Members[];
 
     constructor(
         title:string, location:string, date:string
@@ -14,7 +14,7 @@ export class Gatherings{
         this.title = title;
         this.location = location;
         this.date = date;
-        this.members;
+        this.members = [];
      
 
     }
@@ -44,7 +44,7 @@ export class Gatherings{
     }
  
     public viewMembers(): string[]{
-        let arr :string[];
+        let arr :string[] = [];
         let mem:string;
         for(let i=0; i<this.members.length; i++){
            mem = this.members[i].getName;

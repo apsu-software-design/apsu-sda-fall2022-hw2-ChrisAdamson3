@@ -4,14 +4,14 @@ import {Gatherings} from './gatherings';
 export class Organizations{
 
     title:string;
-    private members:[Members];
-    private gatherings:[Gatherings];
+    private members:Members[];
+    private gatherings:Gatherings[];
 
 
     constructor(title:string) {
         this.title= title;
-        this.members;
-        this.gatherings;
+        this.members=[];
+        this.gatherings =[];
 
     }
 
