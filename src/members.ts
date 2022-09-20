@@ -1,3 +1,9 @@
+/*
+Chris Adamson
+CSCI 4602
+9-19-22
+*/
+
 export class Members{
 
 private email:string;

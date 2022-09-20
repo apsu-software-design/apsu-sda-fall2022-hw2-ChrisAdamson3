@@ -1,3 +1,10 @@
+/*
+Chris Adamson
+CSCI 4602
+9-19-22
+*/
+
+
 import {Members} from './members';
 
 
@@ -18,7 +25,7 @@ export class Gatherings{
      
 
     }
-
+//Method to add a member to a specific gathering
     public addMember(member:Members) {
         this.members.push(member);
     }
@@ -42,7 +49,7 @@ export class Gatherings{
     public set setDate(date:string){
         this.date = date;
     }
- 
+ //Method to see a list of members for a gathering
     public viewMembers(): string[]{
         let arr :string[] = [];
         let mem:string;
